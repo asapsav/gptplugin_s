@@ -9,10 +9,10 @@
   },
   "api": {
     "type": "openapi",
-    "url": "/openapi.yaml",
+    "url": "/openapi.json",
     "is_user_authenticated": false
   },
   "logo_url": "https://gptplugin-s.vercel.app/logo.png",
   "contact_email": "holins12@gmail.com",
-  "legal_info_url": "https://gptplugin-s.vercel.app"
+  "legal_info_url": "https://example.com/legal"
 }
