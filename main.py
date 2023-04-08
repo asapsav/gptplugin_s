@@ -38,6 +38,7 @@ async def plugin_logo():
     filename = 'logo.png'
     return await quart.send_file(filename, mimetype='image/png')
 
+###
 
 @app.get("/.well-known/ai-plugin.json")
 async def plugin_manifest():
