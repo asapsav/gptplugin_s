@@ -4,13 +4,7 @@ body, html {
     width: 100%;
     height: 100%;
   }
-  
-  .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+
   
   .character {
     position: absolute;
@@ -18,4 +12,34 @@ body, html {
     height: auto;
     will-change: transform;
   }
+
   
+  /* Set up the container to take up the full height of the viewport */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Style the "chatgpt-team" div */
+  .chatgpt-team {
+    font-size: 100px; /* Make the text big */
+    font-weight: bold; /* Make the text bold */
+    /*color: #ffffff; /* Set the text color to white */
+    /*background-color: #ff8d4c; /* Set the background color to a shade of blue */
+    padding: 20px 30px; /* Add padding around the text */
+    /*border-radius: 20px; /* Round the corners of the div */
+    text-align: center; /* Center the text within the div */
+    width: 100%;  
+  }
+
+  
+  /* Style the highlighted word "team" */
+  .highlight {
+    background-color: #ff8d4c; /* Set the background color to a shade of blue */
+    color: #ffffff; /* Set the text color to white */
+    padding: 5px 10px; /* Add padding around the word "team" */
+    border-radius: 10px; /* Round the corners of the background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
