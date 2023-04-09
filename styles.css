@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .character {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    will-change: transform;
+  }
+  
