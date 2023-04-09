@@ -24,22 +24,28 @@ body, html {
   
   /* Style the "chatgpt-team" div */
   .chatgpt-team {
-    font-size: 100px; /* Make the text big */
+    font-size: 4vw; /* Make the text big */
     font-weight: bold; /* Make the text bold */
     color: #373737; /* Set the text color to white */
     /*background-color: #ff8d4c; /* Set the background color to a shade of blue */
-    padding: 20px 30px; /* Add padding around the text */
+    padding: 0.5vw 1vw; /* Add padding around the text */
     /*border-radius: 20px; /* Round the corners of the div */
     text-align: center; /* Center the text within the div */
     width: 100%;  
   }
 
-  
   /* Style the highlighted word "team" */
-  .highlight {
+.highlight {
     background-color: #ff8d4c; /* Set the background color to a shade of blue */
     color: #ffffff; /* Set the text color to white */
-    padding: 5px 10px; /* Add padding around the word "team" */
-    border-radius: 10px; /* Round the corners of the background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    padding: 0.5vw 1vw; /* Use viewport width units for padding */
+    border-radius: 1vw; /* Use viewport width units for border radius */
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Use viewport width units for box shadow */
+  }
+
+  /* Media query for smaller screens */
+@media (max-width: 600px) {
+    .chatgpt-team {
+      font-size: 6vw; /* Increase font size for smaller screens */
+    }
   }
