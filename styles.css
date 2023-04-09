@@ -46,6 +46,6 @@ body, html {
   /* Media query for smaller screens */
 @media (max-width: 600px) {
     .chatgpt-team {
-      font-size: 6vw; /* Increase font size for smaller screens */
+      font-size: 10vw; /* Increase font size for smaller screens */
     }
   }
