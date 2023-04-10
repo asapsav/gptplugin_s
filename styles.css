@@ -43,6 +43,14 @@ body, html {
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* Use viewport width units for box shadow */
   }
 
+  /* Style the description text */
+.description {
+  font-size: 1.2vw; /* Use viewport width units for font size */
+  color: #666666; /* Set the text color to a shade of gray */
+  text-align: center; /* Center the text within the div */
+  max-width: 80%; /* Set a maximum width for the description text */
+}
+
   /* Media query for smaller screens */
 @media (max-width: 600px) {
     .chatgpt-team {

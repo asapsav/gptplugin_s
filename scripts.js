@@ -8,7 +8,8 @@ const characters = [
     document.getElementById('character7'),
     document.getElementById('character8'),
     document.getElementById('character9'),
-    document.getElementById('character10')
+    document.getElementById('character10'),
+    document.getElementById('qrcode')
   ];
   
   function animateCharacter(character) {
