@@ -32,6 +32,38 @@ async def delete_todo(username: str, todo_idx: int):
 async def plugin_logo():
   return FileResponse('logo.png')
 
+@app.get("/generate-openapi-yaml")
+async def generate_openapi_yaml():
+    import yaml  # Import the pyyaml library
+
+    import os
+    from fastapi.openapi.utils import get_openapi
+
+    # Get the OpenAPI JSON schema
+    openapi_schema = get_openapi(
+        title="My Application",
+        version="1.0.0",
+        routes=app.routes,
+    )
+
+    # Convert the JSON schema to YAML
+    openapi_yaml = yaml.dump(openapi_schema)
+
+    # Create the .well-known directory if it doesn't exist
+    os.makedirs(".well-known", exist_ok=True)
+
+    # Write the YAML schema to the .well-known/openapi.yaml file
+    print("Writing OpenAPI YAML schema to .well-known/openapi.yaml")
+    with open(".well-known/openapi.yaml", "w") as yaml_file:
+        yaml_file.write(openapi_yaml)
+
+    return {"detail": "OpenAPI YAML schema has been generated and stored in .well-known/openapi.yaml"}
+
+
+@app.on_event("startup")
+async def on_startup():
+    # Call the generate_openapi_yaml function during the startup event
+    await generate_openapi_yaml()
 
 @app.get("/.well-known/ai-plugin.json")
 async def plugin_manifest(request: Request):
